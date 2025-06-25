@@ -25,6 +25,7 @@ function App() {
     const sectionIds = ['home', 'about', 'programs', 'contact', 'faq'];
     const handleScroll = () => {
       let current = 'home';
+      
       for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (el) {
