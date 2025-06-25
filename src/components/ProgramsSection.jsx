@@ -10,7 +10,7 @@ const ProgramsSection = () => (
     <div className="max-w-6xl mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-10 text-center">Our Internship Programs</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center border border-cyan-900 backdrop-blur-md transition-all duration-300 hover:shadow-cyan-400/50 hover:ring-4 hover:ring-cyan-400/60 hover:border-cyan-400">
           <img src={Logo} alt="Cyber Security" className="h-16 w-16 mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2 text-center">Cyber Security Internship</h3>
           <ul className="text-gray-300 mb-4 space-y-1 text-center">
@@ -22,7 +22,7 @@ const ProgramsSection = () => (
           </ul>
           <button className="bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2 rounded transition-colors">Enroll Now</button>
         </div>
-        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center border border-cyan-900 backdrop-blur-md transition-all duration-300 hover:shadow-cyan-400/50 hover:ring-4 hover:ring-cyan-400/60 hover:border-cyan-400">
           <img src={Logo} alt="Full Stack Development" className="h-16 w-16 mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2 text-center">Full Stack Development Internship</h3>
           <ul className="text-gray-300 mb-4 space-y-1 text-center">
@@ -34,7 +34,7 @@ const ProgramsSection = () => (
           </ul>
           <button className="bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2 rounded transition-colors">Enroll Now</button>
         </div>
-        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center border border-cyan-900 backdrop-blur-md transition-all duration-300 hover:shadow-cyan-400/50 hover:ring-4 hover:ring-cyan-400/60 hover:border-cyan-400">
           <img src={Logo} alt="Data Science" className="h-16 w-16 mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2 text-center">Data Science Internship</h3>
           <ul className="text-gray-300 mb-4 space-y-1 text-center">
@@ -46,7 +46,7 @@ const ProgramsSection = () => (
           </ul>
           <button className="bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2 rounded transition-colors">Enroll Now</button>
         </div>
-        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+        <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center border border-cyan-900 backdrop-blur-md transition-all duration-300 hover:shadow-cyan-400/50 hover:ring-4 hover:ring-cyan-400/60 hover:border-cyan-400">
           <img src={Logo} alt="Project Management" className="h-16 w-16 mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2 text-center">Project Management Internship</h3>
           <ul className="text-gray-300 mb-4 space-y-1 text-center">

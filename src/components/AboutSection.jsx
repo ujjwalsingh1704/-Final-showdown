@@ -40,15 +40,15 @@ const AboutSection = () => (
       <div className="mb-16">
         <h2 className="text-2xl font-bold text-cyan-400 mb-6 text-center">The Best Beneficial Side of INLIGHN TECH</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+          <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center border border-cyan-900 backdrop-blur-md transition-all duration-300 hover:shadow-cyan-400/50 hover:ring-4 hover:ring-cyan-400/60 hover:border-cyan-400">
             <h3 className="text-xl font-semibold text-white mb-2">High Quality Resources</h3>
             <p className="text-gray-300 text-center">Our expertly designed resources provide hands-on learning and real-world skills with up-to-date content.</p>
           </div>
-          <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+          <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center border border-cyan-900 backdrop-blur-md transition-all duration-300 hover:shadow-cyan-400/50 hover:ring-4 hover:ring-cyan-400/60 hover:border-cyan-400">
             <h3 className="text-xl font-semibold text-white mb-2">Expert Instructors</h3>
             <p className="text-gray-300 text-center">Learn from seasoned industry professionals who bring real-world experience and insights to every lesson.</p>
           </div>
-          <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+          <div className="bg-gray-800 bg-opacity-80 rounded-xl p-6 shadow-lg flex flex-col items-center border border-cyan-900 backdrop-blur-md transition-all duration-300 hover:shadow-cyan-400/50 hover:ring-4 hover:ring-cyan-400/60 hover:border-cyan-400">
             <h3 className="text-xl font-semibold text-white mb-2">Internship Portal Access</h3>
             <p className="text-gray-300 text-center">Get separate portal access to all course materials and updates, allowing you to learn at your own pace.</p>
           </div>

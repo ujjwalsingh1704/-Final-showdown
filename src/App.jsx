@@ -7,7 +7,6 @@ import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import FeaturesSection from './components/FeaturesSection';
 import ProgramsSection from './components/ProgramsSection';
-import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import WhatsAppWidget from './components/WhatsAppWidget';
 import FAQSection from './components/FAQSection';
@@ -33,7 +32,7 @@ function MainSite({ activeSection }) {
             <FeaturesSection />
             <section id="programs"><ProgramsSection /></section>
           </main>
-          <section id="testimonials"><TestimonialsSection /></section>
+        
           <section id="contact"><ContactSection /></section>
           <section id="faq"><FAQSection /></section>
           <Footer />
