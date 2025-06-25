@@ -9,7 +9,7 @@ const Header = () => (
     </div>
     <nav className="hidden md:block">
       <ul className="flex space-x-6 text-lg font-medium">
-        <li><a href="#home" className="text-cyan-400 hover:text-cyan-300 transition-colors">Home</a></li>
+        <li><a href="#home" className="text-white hover:text-cyan-300 transition-colors">Home</a></li>
         <li><a href="#about" className="text-white hover:text-cyan-300 transition-colors">About Us</a></li>
         <li><a href="#programs" className="text-white hover:text-cyan-300 transition-colors">Programs</a></li>
         <li><a href="#special" className="text-white hover:text-cyan-300 transition-colors">Specials</a></li>
