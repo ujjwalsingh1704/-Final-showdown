@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loader from './components/Loader';
 import Header from './components/Header';
 import MobileNav from './components/MobileNav';
@@ -11,42 +12,9 @@ import ContactSection from './components/ContactSection';
 import WhatsAppWidget from './components/WhatsAppWidget';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
+import LoginPage from './components/LoginPage';
 
-function App() {
-  const [loading, setLoading] = useState(true);
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const sectionIds = ['home', 'about', 'programs', 'contact', 'faq'];
-    const handleScroll = () => {
-      let current = 'home';
-      
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 80 && rect.bottom > 80) {
-            current = id;
-            break;
-          }
-        }
-      }
-      setActiveSection(current);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  if (loading) {
-    return <Loader />;
-  }
-
+function MainSite({ activeSection }) {
   return (
     <div className="App w-full min-h-screen bg-black">
       <WhatsAppWidget />
@@ -72,6 +40,50 @@ function App() {
         </div>
       </div>
     </div>
+  );
+}
+
+function App() {
+  const [loading, setLoading] = useState(true);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = ['home', 'about', 'programs', 'contact', 'faq'];
+    const handleScroll = () => {
+      let current = 'home';
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom > 80) {
+            current = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/*" element={<MainSite activeSection={activeSection} />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../assets/Logo.png';
 
 const navLinks = [
@@ -49,8 +50,7 @@ const Header = ({ activeSection }) => {
         </ul>
       </nav>
       <div className="flex items-center space-x-3">
-        <button className="btn btn-primary loginPortal bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2 rounded transition-colors">Login</button>
-        <button className="btn btn-primary verifyPortal bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2 rounded transition-colors">Verify</button>
+        <Link to="/login" className="btn btn-primary loginPortal bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2 rounded transition-colors">Login</Link>
         <div className="md:hidden ml-2 cursor-pointer burger-menu">
           <i className="fas fa-bars text-2xl text-cyan-400"></i>
         </div>
