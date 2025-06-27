@@ -1,0 +1,46 @@
+import React, { useState, useEffect } from 'react';
+import Spline from '@splinetool/react-spline';
+
+const fullText = 'Transform Your Career with INLIGHN TECH';
+
+const HeroSection = () => {
+  const [displayed, setDisplayed] = useState('');
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayed(fullText.slice(0, i + 1));
+      i++;
+      if (i === fullText.length) clearInterval(interval);
+    }, 40);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Split for coloring 'INLIGHN TECH' white
+  const cyanPart = 'Transform Your Career with ';
+  const whitePart = 'INLIGHN TECH';
+ 
+ const cyanLength = cyanPart.length;
+
+  return (
+    <section className="relative flex flex-col md:flex-row items-center justify-between w-full min-h-screen bg-gradient-to-br from-black via-gray-960 to-cyan-950 px-6 py-16 overflow-hidden">
+     
+      <div className="relative z-20 flex-1 flex flex-col items-start space-y-6 max-w-xl">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-cyan-400 leading-tight drop-shadow-lg">
+          {displayed.length <= cyanLength ? (
+            displayed
+          ) : (
+            <>
+              {displayed.slice(0, cyanLength)}
+              <span className="text-white">{displayed.slice(cyanLength)}</span>
+            </>
+          )}
+        </h1>
+        <p className="text-lg md:text-xl text-gray-200">Industry-oriented internships in Cyber Security, Full Stack Development, Data Science, and Project Management. Learn by doing, get certified, and launch your tech career!</p>
+        <div className="flex space-x-4 mt-4">
+          <a href="#programs" className="bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-6 py-3 rounded-lg shadow transition-colors">Explore Programs</a>
+          <a href="#contact" className="bg-transparent border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold px-6 py-3 rounded-lg transition-colors">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  );
